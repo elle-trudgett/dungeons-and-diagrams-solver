@@ -28,6 +28,7 @@ class Cell:
         Marks the cell as only containing the particular cell type.
         :param cell_type: The cell type to set this cell to.
         """
+        print(f"resolving as {cell_type}")
         if cell_type == CellType.UNKNOWN:
             raise ValueError("Cannot resolve cell to unknown.")
         self.candidates = {cell_type}
@@ -58,4 +59,4 @@ class Cell:
             case CellType.CHEST: return "c"
 
     def __repr__(self) -> str:
-        return f"Cell({self.__str__()})"
+        return f"{self.__str__()}"
